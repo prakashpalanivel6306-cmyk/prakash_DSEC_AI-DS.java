@@ -1,0 +1,222 @@
+Question 1: Hello, Java!
+java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+        System.out.println("Welcome to Programming.");
+        System.out.println("My journey starts today.");
+    }
+}
+
+
+Question 2: College Information
+java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("College: ABC Engineering College");
+        System.out.println("Department: Computer Science");
+        System.out.println("Course: Java Programming");
+    }
+}
+
+
+Question 3: Single-Line Display
+java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Java is simple Java is powerful");
+    }
+}
+
+
+Question 4: Format Using Escape Sequences
+Use \n for a new line and \t for a tab.
+
+java
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Name\t: Arun");
+        System.out.println("Course\t: Java");
+        System.out.println("Level\t: Beginner");
+    }
+}
+
+Question 5: Student Profile
+java
+public class Main {
+    public static void main(String[] args) {
+        String name = "Arun";
+        int age = 21;
+        char grade = 'A';
+        boolean placementStatus = true;
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Grade: " + grade);
+        System.out.println("Placement Status: " + placementStatus);
+    }
+}
+
+
+Question 6: Choose the Correct Data Types
+java
+public class Main {
+    public static void main(String[] args) {
+        int population = 8000000;
+        double productPrice = 1499.95;
+        char bloodGroup = 'A';
+        boolean accountVerified = true;
+        String employeeName = "Kavin";
+
+        System.out.println("Population: " + population);
+        System.out.println("Product Price: " + productPrice);
+        System.out.println("Blood Group: " + bloodGroup);
+        System.out.println("Account Verified: " + accountVerified);
+        System.out.println("Employee Name: " + employeeName);
+    }
+}
+
+
+Question 7: Product Information Card
+java
+public class Main {
+    public static void main(String[] args) {
+        String productName = "Laptop";
+        int productId = 101;
+        double price = 45000.00;
+        boolean availability = true;
+
+        System.out.println("PRODUCT INFORMATION");
+        System.out.println("-------------------");
+        System.out.println("Product Name: " + productName);
+        System.out.println("Product ID: " + productId);
+        System.out.println("Price: " + price);
+        System.out.println("Available: " + availability);
+    }
+}
+
+
+Question 8: Age and City
+Use Scanner to read the age and city from the user.
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int age = sc.nextInt();
+        String city = sc.next();
+
+        System.out.println("Age: " + age);
+        System.out.println("City: " + city);
+
+        sc.close();
+    }
+}
+
+
+Question 9: Student Registration Form
+Use next() for single-word inputs and nextLine() for the student's full name.
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+        int rollNumber = sc.nextInt();
+        String department = sc.next();
+        double percentage = sc.nextDouble();
+
+        System.out.println("STUDENT REGISTRATION");
+        System.out.println("Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Department: " + department);
+        System.out.println("Percentage: " + percentage);
+
+        sc.close();
+    }
+}
+
+Question 10: Movie Ticket Booking Profile
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String customer = sc.next();
+        String movie = sc.next();
+        int tickets = sc.nextInt();
+        double ticketPrice = sc.nextDouble();
+
+        System.out.println("BOOKING SUMMARY");
+        System.out.println("Customer: " + customer);
+        System.out.println("Movie: " + movie);
+        System.out.println("Tickets: " + tickets);
+        System.out.println("Ticket Price: " + ticketPrice);
+
+        sc.close();
+    }
+}
+
+
+Question 11: Online Shopping Address Form
+The customer's full name and street address contain spaces, so nextLine() is used to read them.
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String name = sc.nextLine();
+        String address = sc.nextLine();
+        String city = sc.nextLine();
+        int pinCode = sc.nextInt();
+        boolean deliveryPreference = sc.nextBoolean();
+
+        System.out.println("DELIVERY DETAILS");
+        System.out.println("Customer Name: " + name);
+        System.out.println("Street Address: " + address);
+        System.out.println("City: " + city);
+        System.out.println("PIN Code: " + pinCode);
+        System.out.println("Delivery Preference: " + deliveryPreference);
+
+        sc.close();
+    }
+}
+
+
+Question 12: Hospital Patient Record
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String patientName = sc.nextLine();
+        int patientId = sc.nextInt();
+        int age = sc.nextInt();
+        double temperature = sc.nextDouble();
+        boolean admitted = sc.nextBoolean();
+
+        System.out.println("PATIENT RECORD");
+        System.out.println("Patient Name: " + patientName);
+        System.out.println("Patient ID: " + patientId);
+        System.out.println("Age: " + age);
+        System.out.println("Temperature: " + temperature);
+        System.out.println("Admitted: " + admitted);
+
+        sc.close();
+    }
+}
+
+
