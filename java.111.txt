@@ -220,3 +220,221 @@ public class Main {
 }
 
 
+
+
+
+
+1. Even or Odd
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(n % 2 == 0 ? "Even" : "Odd");
+    }
+}
+2. Greater Number
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        System.out.println(a == b ? "Equal" : (a > b ? a : b));
+    }
+}
+3. Positive or Negative
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(n > 0 ? "Positive" : (n < 0 ? "Negative" : "Zero"));
+    }
+}
+4. Eligible Age
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+
+        System.out.println(age >= 18 ? "Eligible" : "Not Eligible");
+    }
+}
+5. Divisibility Check
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(n % 3 == 0 && n % 5 == 0
+                ? "Divisible by Both"
+                : "Not Divisible by Both");
+    }
+}
+6. Biggest of Three
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        int largest = a >= b && a >= c ? a : (b >= c ? b : c);
+        System.out.println(largest);
+    }
+}
+7. Last Digit Is Even
+Math.abs(n % 10) also handles negative numbers.
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        System.out.println(Math.abs(n % 10) % 2 == 0 ? "Yes" : "No");
+    }
+}
+8. Student Result
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int m1 = sc.nextInt();
+        int m2 = sc.nextInt();
+        int m3 = sc.nextInt();
+
+        System.out.println(m1 >= 35 && m2 >= 35 && m3 >= 35
+                ? "Pass"
+                : "Fail");
+    }
+}
+9. Free Delivery
+Enter the premium status as true or false.
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double amount = sc.nextDouble();
+        boolean premium = sc.nextBoolean();
+
+        System.out.println(amount >= 1000 || premium
+                ? "Free Delivery"
+                : "Not Free Delivery");
+    }
+}
+10. Discount Calculator
+This assumes the final amount should be printed to two decimal places.
+
+java
+
+Collapse
+
+
+ Copy
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double amount = sc.nextDouble();
+
+        double finalAmount = amount >= 2000 ? amount * 0.90 : amount;
+        System.out.printf("%.2f%n", finalAmount);
+    }
+}
+
+
+
+
+
+Auto
+
