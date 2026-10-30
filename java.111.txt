@@ -1699,3 +1699,351 @@ public class Main {
         sc.close();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+Problem 1. Remove Duplicate Characters
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+        String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (result.indexOf(ch) == -1) {
+                result += ch;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+
+
+Problem 2. Find the First Non-Repeating Character
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+        boolean found = false;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            int count = 0;
+
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) == ch) {
+                    count++;
+                }
+            }
+
+            if (count == 1) {
+                System.out.println(ch);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No non-repeating character");
+        }
+    }
+}
+
+
+
+Problem 3. Count Words in a Sentence
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine().trim();
+
+        if (str.isEmpty()) {
+            System.out.println(0);
+        } else {
+            String[] words = str.split("\\s+");
+            System.out.println(words.length);
+        }
+    }
+}
+
+
+
+Problem 4. Find the Most Frequent Character
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+
+        int max = 0;
+        char result = ' ';
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            int count = 0;
+
+            for (int j = 0; j < str.length(); j++) {
+                if (str.charAt(j) == ch) {
+                    count++;
+                }
+            }
+
+            if (count > max) {
+                max = count;
+                result = ch;
+            }
+        }
+
+        if (!str.isEmpty()) {
+            System.out.println("Most frequent character: " + result);
+            System.out.println("Frequency: " + max);
+        }
+    }
+}
+
+
+
+Problem 5. Toggle the Case of Every Letter
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+        String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isUpperCase(ch)) {
+                result += Character.toLowerCase(ch);
+            } else if (Character.isLowerCase(ch)) {
+                result += Character.toUpperCase(ch);
+            } else {
+                result += ch;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+
+
+
+
+Problem 6. Replace Every Occurrence of a Word
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String sentence = sc.nextLine();
+        String oldWord = sc.nextLine();
+        String newWord = sc.nextLine();
+
+        String result = sentence.replaceAll(
+            "\\b" + java.util.regex.Pattern.quote(oldWord) + "\\b",
+            java.util.regex.Matcher.quoteReplacement(newWord)
+        );
+
+        System.out.println(result);
+    }
+}
+
+
+Problem 7. Find the Longest Word
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String sentence = sc.nextLine().trim();
+
+        if (sentence.isEmpty()) {
+            return;
+        }
+
+        String[] words = sentence.split("\\s+");
+
+        String longest = "";
+        int max = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i].replaceAll(
+                "^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$", ""
+            );
+
+            if (word.length() > max) {
+                max = word.length();
+                longest = word;
+            }
+        }
+
+        System.out.println("Longest word: " + longest);
+        System.out.println("Length: " + max);
+    }
+}
+
+
+
+Problem 8. Check Whether One String Is a Rotation of Another
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+
+        if (str1.length() == str2.length()
+                && (str1 + str1).contains(str2)) {
+            System.out.println("Strings are rotations");
+        } else {
+            System.out.println("Strings are not rotations");
+        }
+    }
+}
+
+
+
+Problem 9. Compress Consecutive Repeated Characters
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = sc.nextLine();
+        String result = "";
+
+        int count = 1;
+
+        for (int i = 0; i < str.length(); i++) {
+
+            if (i < str.length() - 1
+                    && str.charAt(i) == str.charAt(i + 1)) {
+                count++;
+            } else {
+                result += str.charAt(i);
+                result += count;
+                count = 1;
+            }
+        }
+
+        System.out.println(result);
+    }
+}
+
+
+
+Problem 10. Find the Common Prefix of Two Strings
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+
+        String prefix = "";
+
+        int min = Math.min(str1.length(), str2.length());
+
+        for (int i = 0; i < min; i++) {
+            if (str1.charAt(i) == str2.charAt(i)) {
+                prefix += str1.charAt(i);
+            } else {
+                break;
+            }
+        }
+
+        if (prefix.isEmpty()) {
+            System.out.println("No common prefix");
+        } else {
+            System.out.println("Common prefix: " + prefix);
+        }
+    }
+}
+
+
+Problem 11. Compare Two Strings Without Using equals()
+
+java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+
+        boolean same = true;
+
+        if (str1.length() != str2.length()) {
+            same = false;
+        } else {
+            for (int i = 0; i < str1.length(); i++) {
+                if (str1.charAt(i) != str2.charAt(i)) {
+                    same = false;
+                    break;
+                }
+            }
+        }
+
+        if (same) {
+            System.out.println("Strings are equal");
+        } else {
+            System.out.println("Strings are not equal");
+        }
+    }
+}
